@@ -22,7 +22,7 @@ const addTask = async (
     }
     };
 
-    onst updateTask = async (
+const updateTask = async (
         req,
         res) => {
         const { title, description, completed, deadline } = req.body;
@@ -40,9 +40,7 @@ const addTask = async (
         }
         };
 
-const deleteTask = async (
-req,
-res) => {
+const deleteTask = async (req, res) => {
 try {
     const task = await Task.findById(req.params.id);
     if (!task) return res.status(404).json({ message: 'Task not found' });
